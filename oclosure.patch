@@ -1,0 +1,24 @@
+diff -rN -u old-oclosure/goog/events/eventTarget.ml new-oclosure/goog/events/eventTarget.ml
+--- old-oclosure/goog/events/eventTarget.ml	2011-03-31 23:56:17.000000000 +0200
++++ new-oclosure/goog/events/eventTarget.ml	2011-03-31 23:56:23.000000000 +0200
+@@ -20,7 +20,7 @@
+ 
+   method getParentEventTarget : eventTarget t meth
+ 
+-  method removeEventListener : js_string t -> (unit -> bool t) -> bool t opt -> unit meth
++  method removeEventListener : js_string t -> (unit -> bool t) callback -> bool t opt -> unit meth
+ 
+   method setParentEventTarget : eventTarget t opt -> unit meth
+ end
+diff -rN -u old-oclosure/goog/events/eventTarget.mli new-oclosure/goog/events/eventTarget.mli
+--- old-oclosure/goog/events/eventTarget.mli	2011-03-31 23:56:17.000000000 +0200
++++ new-oclosure/goog/events/eventTarget.mli	2011-03-31 23:56:23.000000000 +0200
+@@ -48,7 +48,7 @@
+    of the event.
+    @param opt_handlerScope Object in whose scope to call the listener.
+ *)
+-  method removeEventListener : js_string t -> (unit -> bool t) -> bool t opt -> unit meth
++  method removeEventListener : js_string t -> (unit -> bool t) callback -> bool t opt -> unit meth
+ 
+  (** Sets the parent of this event target to use for bubbling. *)
+   method setParentEventTarget : eventTarget t opt -> unit meth

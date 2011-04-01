@@ -6,7 +6,8 @@ the [O’Closure] binding for the Closure Library.
 
 This software is released under the [CeCILL] license.
 
-## Compiling
+
+### Compiling
 
 The `Makefile` must be configured with the paths to the Closure
 Library and Compiler. It also assumes that [js_of_ocaml] and
@@ -14,6 +15,10 @@ Library and Compiler. It also assumes that [js_of_ocaml] and
 
 A tiny bug in the types in [O’Closure] must be patched beforehands.
 
+
+### Demonstration
+
+You can play it [here](http://shym.github.com/trist/trist.html).
 
 
 [Objective Caml]:  http://caml.inria.fr/
